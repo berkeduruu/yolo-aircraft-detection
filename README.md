@@ -20,6 +20,12 @@ Fixed-wing aircraft detection for the TEKNOFEST Fighting UAV competition, built 
 
 ---
 
+## Start here
+
+This repository is a complete aircraft-detection workflow: extract frames, annotate them, train YOLO models, evaluate detections, and deploy the result on Jetson. The included `models/N_new720p.pt` and `models/S_new720p.pt` files let you begin inference without downloading a model checkpoint.
+
+For a reproducible dataset path, use [Video Frame Grabber](https://github.com/berkeduruu/Video-Frame-Grabber) → [YOLO Supported Annotation Tool](https://github.com/berkeduruu/YOLO_Supported_Annotation_Tool) → this repository. For deployment-oriented DeepStream graphs, continue to [Jetson DeepStream YOLO Pipelines](https://github.com/berkeduruu/jetson-deepstream-yolo-pipelines).
+
 ## Demo — YOLO Lock-On
 
 Example competition footage with YOLO target lock-on on fixed-wing aircraft:
@@ -160,6 +166,8 @@ Single-model ROI detection can still produce false positives in cluttered aerial
 5. **Folder batch inference + label export:** `python codes/inference/folder_inference.py`
 6. **Training:** open `codes/train/YoloPlane.ipynb` in Google Colab.
 7. **TensorRT export:** `python codes/export/export_tensorrt_engine.py`
+
+If this work helps your aircraft-detection or dataset workflow, starring the repository helps other computer-vision developers find it.
 
 ## License
 

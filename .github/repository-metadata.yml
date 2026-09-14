@@ -1,0 +1,9 @@
+name: YOLO Plane Detect
+description: YOLO-based fixed-wing aircraft detection, training, and inference workflows.
+topics:
+  - yolo11
+  - aircraft-detection
+  - computer-vision
+  - uav
+  - object-detection
+  - ultralytics
