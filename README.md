@@ -1,4 +1,4 @@
-# YOLO Plane Detect v1
+# YOLO Aircraft Detection v1
 
 <div align="center">
 
@@ -6,7 +6,7 @@
 [![YOLOv11](https://img.shields.io/badge/YOLO-v11-00A6D6)](https://docs.ultralytics.com/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.8%2B-5C3EE8)](https://opencv.org/)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v1-orange)](https://github.com/berkeduruu/YOLO_Plane_Detect)
+[![Version](https://img.shields.io/badge/version-v1-orange)](https://github.com/berkeduruu/yolo-aircraft-detection)
 
 Fixed-wing aircraft detection for the TEKNOFEST Fighting UAV competition, built with custom-trained YOLOv11 models. This repository includes training notebooks, inference scripts, export utilities, and reference results for aerial target detection.
 
@@ -24,7 +24,7 @@ Fixed-wing aircraft detection for the TEKNOFEST Fighting UAV competition, built 
 
 This repository is a complete aircraft-detection workflow: extract frames, annotate them, train YOLO models, evaluate detections, and deploy the result on Jetson. The included `models/N_new720p.pt` and `models/S_new720p.pt` files let you begin inference without downloading a model checkpoint.
 
-For a reproducible dataset path, use [Video Frame Grabber](https://github.com/berkeduruu/Video-Frame-Grabber) → [YOLO Supported Annotation Tool](https://github.com/berkeduruu/YOLO_Supported_Annotation_Tool) → this repository. For deployment-oriented DeepStream graphs, continue to [Jetson DeepStream YOLO Pipelines](https://github.com/berkeduruu/jetson-deepstream-yolo-pipelines).
+For a reproducible dataset path, use [Video Frame Grabber](https://github.com/berkeduruu/Video-Frame-Grabber) → [YOLO Annotation Tool](https://github.com/berkeduruu/yolo-annotation-tool) → this repository. For deployment-oriented DeepStream graphs, continue to [Jetson DeepStream YOLO Pipelines](https://github.com/berkeduruu/jetson-deepstream-yolo-pipelines).
 
 ## Demo — YOLO Lock-On
 
@@ -48,14 +48,14 @@ Two companion tools from the same author can help you go from raw video to a lab
 | Tool | Repository | Purpose |
 |------|------------|---------|
 | **Video Frame Grabber** | [berkeduruu/Video-Frame-Grabber](https://github.com/berkeduruu/Video-Frame-Grabber) | Extract frames from video files with precise time-range control, multiple extraction modes, and image filters — ideal for turning flight footage into training images. |
-| **YOLO Supported Annotation Tool** | [berkeduruu/YOLO_Supported_Annotation_Tool](https://github.com/berkeduruu/YOLO_Supported_Annotation_Tool) | Annotate extracted frames in YOLO format. If you already have a trained model, it can pre-annotate frames automatically so you can spot model errors early and correct them while building a new dataset. |
+| **YOLO Annotation Tool** | [berkeduruu/yolo-annotation-tool](https://github.com/berkeduruu/yolo-annotation-tool) | Annotate extracted frames in YOLO format. If you already have a trained model, it can pre-annotate frames automatically so you can spot model errors early and correct them while building a new dataset. |
 
 **Suggested workflow:** extract frames with Video Frame Grabber → annotate (and refine model mistakes) with the Annotation Tool → train with [`codes/train/YoloPlane.ipynb`](codes/train/YoloPlane.ipynb).
 
 ## Repository Layout
 
 ```
-YOLO_Plane_Detect/
+yolo-aircraft-detection/
 ├── codes/             # Inference, export, training, video utilities
 ├── models/            # Model weights, training logs, charts
 ├── data/              # Dataset layout guide and data.yaml template

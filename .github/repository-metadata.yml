@@ -1,4 +1,4 @@
-name: YOLO Plane Detect
+name: YOLO Aircraft Detection
 description: YOLO-based fixed-wing aircraft detection, training, and inference workflows.
 topics:
   - yolo11

@@ -21,5 +21,5 @@ def test_included_model_and_demo_assets_exist():
 def test_documented_dataset_tools_are_linked():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Video-Frame-Grabber" in readme
-    assert "YOLO_Supported_Annotation_Tool" in readme
+    assert "yolo-annotation-tool" in readme
     assert "jetson-deepstream-yolo-pipelines" in readme
